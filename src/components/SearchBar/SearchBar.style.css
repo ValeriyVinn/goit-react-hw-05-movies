@@ -1,0 +1,36 @@
+.formSearch {
+  width: 700px;
+  margin: 20px auto;
+}
+
+.inputSearch {
+  width: 500px;
+  height: 50px;
+  font-size: 24px;
+  color: red;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.buttonSearch {
+  position: relative;
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 600;
+  border: none;
+
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  height: 54px;
+
+  padding: 10px 20px;
+  color: red;
+  background: linear-gradient(to left, orange 50%, black 50%);
+  background-size: 200% 100%;
+  transition: background-position 0.5s;
+}
+
+.buttonSearch:hover {
+  background-position: -100% 0;
+  color: red;
+}
