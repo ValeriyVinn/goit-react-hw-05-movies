@@ -1,24 +1,6 @@
-// export const App = () => {
-//   return (
-//     <div
-//       style={{
-//         height: '100vh',
-//         display: 'flex',
-//         justifyContent: 'center',
-//         alignItems: 'center',
-//         fontSize: 40,
-//         color: '#010101'
-//       }}
-//     >
-//       React homework template
-//     </div>
-//   );
-// };
-
-
 import { Route, Routes } from 'react-router-dom';
-import { lazy } from 'react';
-
+import { lazy, Suspense } from 'react';
+import  Loader  from './Loader/Loader'
 import NotFound from '../pages/NotFound/NotFound';
 
 import Cast from './Cast/Cast';
@@ -31,6 +13,8 @@ const MovieDetails = lazy(() => import('../pages/MovieDetails/MovieDetails'));
 export const App = () => {
   return (
     <>
+    
+      <Suspense fallback={<Loader />}>
       <Routes>
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<Home />} />
@@ -44,6 +28,7 @@ export const App = () => {
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
+      </Suspense>
     </>
   );
 };
