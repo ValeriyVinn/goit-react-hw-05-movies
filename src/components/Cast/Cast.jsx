@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { getMovieCast, getURL } from 'servises/api';
 import { toast } from 'react-toastify';
 import Loader from 'components/Loader/Loader';
+import PropTypes from 'prop-types';
 import './Cast.styles.css';
 
 const Casts = () => {
@@ -37,14 +38,14 @@ const Casts = () => {
       >
         {cast ? (
           cast.map(({ original_name, id, profile_path, character }) => (
-            <div  className="character"
+            <div
               key={id}
               style={{ listStyle: 'none', margin: '0 auto', maxWidth: '250px' }}
             >
               <img src={getURL(profile_path)} alt="poster" width={'250px'} />
 
               <p className="actor">{original_name}</p>
-              <p>Character:{character}</p>
+              <p className="character">Character:{character}</p>
             </div>
           ))
         ) : (
@@ -54,4 +55,17 @@ const Casts = () => {
     </>
   );
 };
+
+
+Casts.propTypes = {
+  cast: PropTypes.arrayOf(
+    PropTypes.shape({
+      original_name: PropTypes.string.isRequired,
+      id: PropTypes.number.isRequired,
+      profile_path: PropTypes.string.isRequired,
+      character: PropTypes.string.isRequired,
+    })
+  ),
+};
+
 export default Casts;

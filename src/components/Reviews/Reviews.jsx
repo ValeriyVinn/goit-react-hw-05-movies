@@ -1,5 +1,4 @@
 import { getMovieReviews } from 'servises/api';
-
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
@@ -41,9 +40,6 @@ const Reviews = () => {
         </ul>
     )}
 </div>
-
-
-
   );
 };
 export default Reviews;

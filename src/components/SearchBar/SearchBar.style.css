@@ -17,20 +17,21 @@
   display: inline-block;
   font-size: 24px;
   font-weight: 600;
+  cursor: pointer;
   border: none;
-
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   height: 54px;
-
   padding: 10px 20px;
   color: red;
   background: linear-gradient(to left, orange 50%, black 50%);
   background-size: 200% 100%;
-  transition: background-position 0.5s;
+  transition: background-position 0.2s;
 }
 
 .buttonSearch:hover {
   background-position: -100% 0;
   color: red;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
 }
