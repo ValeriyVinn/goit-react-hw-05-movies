@@ -1,0 +1,23 @@
+.buttonGoBack {
+  position: relative;
+  display: inline-block;
+  margin-top: 20px;
+  width: 134px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+  padding: 10px 20px;
+  color: red;
+  background: linear-gradient(to right, black 50%, orange 50%);
+  background-size: 200% 100%;
+  transition: background-position 0.2s;
+}
+
+.buttonGoBack:hover {
+  background-position: 100% 0;
+  color: red;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
